@@ -1,0 +1,22 @@
+D 1.8 97/11/10 11:58:37 informix 9 8
+Increased what the transaction contains 
+Generate correct code based on log mode of database
+D 1.7 97/11/04 15:12:40 informix 8 7
+Set isolation level to "dirty read" & placed "begin" & "commit" 
+around the lock table and load statements
+D 1.6 97/07/10 15:04:51 informix 7 6
+Constraints are now preserved
+D 1.5 97/06/27 10:42:15 informix 6 5
+Added the generation of column names to index reorg
+D 1.4 97/06/26 16:17:54 informix 5 4
+Added 95% of logic to reorg indexes... still need to gen. column names
+D 1.3 97/01/31 10:50:28 dave 4 3
+Added "views only" option
+D 1.2 97/01/03 14:24:57 dave 3 2
+Added "schema only" option
+Use "sysdepend" instead of "sysviews" to determine view dependencies
+Added support for 'owner'.table command-line syntax
+D 1.1 96/12/16 11:09:50 dave 2 1
+Create views recursively. General cleanup for "lint". Added status messages.
+D 1.0 96/12/12 10:49:11 dave 1 0
+Initial version

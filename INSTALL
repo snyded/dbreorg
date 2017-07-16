@@ -1,0 +1,2 @@
+Edit the makefile and select a compiler to use (esql or c4gl)
+Type: make

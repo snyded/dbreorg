@@ -1,0 +1,72 @@
+.\"
+.\" @(#)dbreorg.1 1.8  11/10/97 11:58:37  11/17/97 12:01:34
+.\"
+.TH DBREORG 1 "dbreorg 1.8"
+.SH NAME
+dbreorg \- generates SQL to reorg a database table or index
+.SH SYNOPSIS
+dbreorg \-d dbname \-t tabname \-e extent [\-n next] [\-s dbspace] file
+.br
+dbreorg \-d dbname \-i idxname [\-s dbspace] file
+.br
+dbreorg \-r [-m max]
+.br
+dbreorg \-d dbname \-t tabname \-schema file
+.br
+dbreorg \-d dbname \-t tabname \-views file
+.SH DESCRIPTION
+.I Dbreorg
+will generate SQL statements that:
+.br
+	* re-organize an Informix-ONLINE table (or index)
+.br
+	* create an Informix-ONLINE table schema
+.br
+	* rebuild all dependent views of an Informix-ONLINE table
+.SH OPTIONS
+.TP
+.B \-d
+database name
+.TP
+.B \-t
+table name
+.TP
+.B \-e
+extent size
+.TP
+.B \-i
+index name
+.TP
+.B \-n
+next size
+.TP
+.B \-s
+dbspace
+.TP
+.B file
+the basename of the file(s) to be generated
+.TP
+.B \-r
+generate extent report
+.TP
+.B \-m
+report tables with greater than
+.I max
+extents
+.TP
+.B \-schema
+generates a table schema only (with views)
+.TP
+.B \-views
+generates a table's views only
+.SH NOTES
+The default value for
+.I dbspace
+is the
+.I dbname
+.PP
+The default value for
+.I max
+extents is 8
+.SH SUPPORT
+Send bug reports to Dave Snyder <dave@snide.com>
